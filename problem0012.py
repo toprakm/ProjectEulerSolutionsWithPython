@@ -18,3 +18,28 @@
 # 
 # What is the value of the first triangle number to have over five hundred divisors?
 # =============================================================================
+import math
+
+find = False
+num = 1
+numAdd=2
+divMax = 0
+while not find:
+    div = 0
+    for i in range(1,int(math.sqrt(num))):
+        if num % i == 0:
+            if i==num/i:
+                div = div + 1
+            else:
+                div = div + 2
+
+    if div > divMax:
+        divMax = div
+        print(divMax)
+
+    if div >= 500:
+        find = True
+    else:
+        num = num + numAdd
+        numAdd=numAdd+1
+print(num)
