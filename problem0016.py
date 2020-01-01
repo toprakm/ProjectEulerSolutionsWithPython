@@ -2,6 +2,7 @@
 #
 # What is the sum of the digits of the number 2^1000?
 
+
 a=2**1000
 stra=str(a)
 top=0
